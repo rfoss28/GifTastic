@@ -12,6 +12,8 @@ $(document).ready(function() {
   topics.forEach(function(animal) {
       console.log(animal);
       var a = $("<button>");
+      a.addClass("animal-btn")
+      a.attr("data-name", this);
       a.text(animal);
       $("#buttons-view").append(a);
     });
@@ -20,11 +22,12 @@ $(document).ready(function() {
   $("#add-animal").on("click", function(event){
    event.preventDefault();
 // captures the animal entered in the text box
-    var newAnimal = $("#animal-input").val();
+    var newAnimal=$("#animal-input").val();
     console.log(newAnimal);
     // adds the user entered animal to the array
     topics.push(newAnimal);
     createButtons();
+    $("#animal-input").empty();
 
   });
 

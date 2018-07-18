@@ -13,7 +13,8 @@ $(document).ready(function() {
       console.log(animal);
       var a = $("<button>");
       a.addClass("animal-btn")
-      a.attr("data-name", this);
+      console.log(this +"for each animal");
+      a.attr("data-name", animal);
       a.text(animal);
       $("#buttons-view").append(a);
     });
@@ -30,5 +31,34 @@ $(document).ready(function() {
     $("#animal-input").empty();
 
   });
+
+  function displayAnimalGifs(){
+
+
+    var animal= $(this).attr("data-name");
+    var queryURL="https://api.giphy.com/v1/gifs/search?q="+ animal +"&limit=10&rating=pg&api_key=TwSWUjJ8io0k15Zv1P60Jp1tNRJOH8rA";
+    
+    //Ajax call for the animal being clicked.
+
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function(response){
+      var animalDiv = $("<div class='animal'>");
+
+      var imgURL=response.data[0].images.original.url;
+      console.log(imgURL);
+      var image=$("<img>").attr("src",imgURL);
+      animalDiv.append(image);
+
+      $("#pictures-view").append(animalDiv);
+    
+    })
+
+  }
+    $(document).on("click",".animal-btn",displayAnimalGifs)
+    console.log("this button is working?");
+ 
+ 
 
 });

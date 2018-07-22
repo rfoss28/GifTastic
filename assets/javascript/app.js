@@ -54,10 +54,10 @@ $(document).ready(function() {
         image.addClass("img-responsive");
         newDiv.addClass("gifDiv");
         image.attr("src", imgURL);
-        image.attr("data-freeze", response.images.fixed_height_still.url);
+        image.attr("data-pause", response.images.fixed_height_still.url);
         image
           .attr("data-play", response.images.fixed_height.url)
-          .attr("data-state", "freeze");
+          .attr("data-state", "pause");
         animalDiv.append('<div class="labledGif">');
         newDiv.append("<p>Rating: " + response.rating + "</p>");
         newDiv.append(image);

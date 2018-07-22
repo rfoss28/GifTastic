@@ -13,4 +13,9 @@
     float: right;
 }
 
+body {
+	background-image: url("../images/light_grey.jpg");
+	background-color: #cccccc;
+ }
+
 

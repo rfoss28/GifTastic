@@ -7,11 +7,48 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/style.css" type="text/reset.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <title>Giftastic</title>
   </head>
   <body>
+
+      <nav class="navbar navbar-dark bg-dark justify-content-between">
+          <a class="navbar-brand" href="#">Animal Gif Generator</a>
+          <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="buttons-view">
+              </li>
+            </ul> -->
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="text" id="animal-input" placeholder="Enter animal name" aria-label="Animal name">
+              <button class="btn btn-outline-success my-2 my-sm-0" id="add-animal"type="submit">Add Animal</button>
+            </form>
+          </div>
+        </nav>
 
    
 
@@ -23,15 +60,6 @@
     </div>
 </div>
   
-
-      <form id="animal-form"class="text-right">
-          <label for="animal-input">Add an animal</label>
-          <input type="text" id="animal-input">
-          <br>
-    
-          <!-- Button triggers new animal to be added -->
-          <input id="add-animal" type="submit" value="Add an  Animal">
-        </form>
         <div class="container">
       
             <div class="col-sm-6 col-lg-10">

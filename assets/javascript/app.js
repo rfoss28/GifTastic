@@ -42,58 +42,42 @@ $(document).ready(function() {
     }).then(function(response) {
       var animalDiv = $("<div class='animal'>");
       var i = 0;
-      // var imgURL="";response.data['+ i +'].images.original.url;
 
       //loops through the response to display returned Gifs
       response.data.forEach(function(response) {
         imgURL = response.images.fixed_height_still.url;
-      
-        
+
         var image = $("<img>");
-        var newDiv=$("<div>");
-    
+        var newDiv = $("<div>");
 
         image.addClass("animal-gif");
         image.addClass("img-responsive");
         newDiv.addClass("gifDiv");
         image.attr("src", imgURL);
-        image
-          .attr("data-freeze", response.images.fixed_height_still.url)
+        image.attr("data-freeze", response.images.fixed_height_still.url);
         image
           .attr("data-play", response.images.fixed_height.url)
           .attr("data-state", "freeze");
-          animalDiv.append('<div class="labledGif">');
+        animalDiv.append('<div class="labledGif">');
         newDiv.append("<p>Rating: " + response.rating + "</p>");
         newDiv.append(image);
-   
-        console.log(animalDiv);
-      
-        $("#pictures-view").append(newDiv);
 
-        
+        $("#pictures-view").append(newDiv);
       });
     });
   }
-      //  Adds on click event for the images to update the url to the animated gif when clicked
-      $(document).on("click", ".animal-gif", function() {
-        console.log(this);
-        var state = $(this).attr("data-state");
-        console.log(state);
+  //  Adds on click event for the images to update the url to the animated gif when clicked
+  $(document).on("click", ".animal-gif", function() {
+    var state = $(this).attr("data-state");
 
-      
-        if (state === "pause") {
-          $(this).attr("src", $(this).attr("data-play"));
-          $(this).attr("data-state", "play");
-        }
-        
-        else{
-          $(this).attr("src", $(this).attr("data-pause"));
-          $(this).attr("data-state", "pause");
-        }
-        console.log($(this).attr("data-state"));
-      });
-    
-  
+    if (state === "pause") {
+      $(this).attr("src", $(this).attr("data-play"));
+      $(this).attr("data-state", "play");
+    } else {
+      $(this).attr("src", $(this).attr("data-pause"));
+      $(this).attr("data-state", "pause");
+    }
+  });
+
   $(document).on("click", ".animal-btn", displayAnimalGifs);
-  console.log("this button is working?");
 });

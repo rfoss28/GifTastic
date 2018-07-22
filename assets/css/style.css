@@ -1,0 +1,16 @@
+.gifDiv{
+	float: left;
+	position: relative;
+	margin: 10px 20px;
+}
+
+.clearfix::after {
+	display: block;
+	content: "";
+	clear: both;
+}
+#animal-form{
+    float: right;
+}
+
+

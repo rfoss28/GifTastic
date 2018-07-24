@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var topics = ["duck", "cat", "dog", "goose"];
+  var topics = ["duck", "cat", "dog", "goose", "giraffe", "hippo"];
 
   createButtons();
 
@@ -9,7 +9,7 @@ $(document).ready(function() {
 
     topics.forEach(function(animal) {
       var a = $("<button>");
-      a.addClass("animal-btn");
+      a.addClass("btn btn-secondary animal-btn ");
       a.attr("data-name", animal);
       a.text(animal);
       $("#buttons-view").append(a);

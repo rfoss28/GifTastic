@@ -5,3 +5,5 @@ This app retrieves up to 10 animals using the giphy API.   Click on the animal's
 ## Installation Instructions
 
 Clone the repository to your desktop and then open the index.html file in your browser.
+
+[Live Link}(https://rfoss28.github.io/GifTastic/)
